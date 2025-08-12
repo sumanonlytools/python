@@ -1,0 +1,80 @@
+from tkinter import *
+import tkinter as tk
+root=Tk()
+root.geometry("300x300")
+root.title("calculator")
+
+def add(x,y):
+    return print(x + y)
+    
+
+def subtract():
+    pass
+
+def multiply():
+    pass
+
+def divide():
+    pass
+
+
+   
+
+    
+def func(arg):
+    print(arg)
+
+def key_press(event):
+    key = event.char
+    print(key, 'is pressed')
+    print(event.x, event.y)
+
+
+
+
+
+
+    
+
+Label(root, text="ssk").grid(row=0,column=0)
+
+
+
+tk.Button(root,text="1",command=lambda: func("See this worked!")).grid(row=1, column=0)
+tk.Button(root,text="2",command=key_press).grid(row=1,column=1)
+tk.Button(root,text="3").grid(row=1,column=2)
+tk.Button(root,text="4").grid(row=2,column=0)
+tk.Button(root,text="5").grid(row=2,column=1)
+tk.Button(root,text="6").grid(row=2,column=2)      
+tk.Button(root,text="7").grid(row=3,column=0)
+tk.Button(root,text="8").grid(row=3,column=1)
+tk.Button(root,text="9").grid(row=3,column=2)
+tk.Button(root,text="0").grid(row=4,column=1)
+tk.Button(root,text="clear").grid(row=4,column=0)
+tk.Button(root,text="=").grid(row=4,column=2)
+tk.Button(root,text="+").grid(row=5,column=0)
+tk.Button(root,text="-").grid(row=5,column=1)
+tk.Button(root,text="x").grid(row=5,column=2)
+tk.Button(root,text="/").grid(row=6,column=0)
+
+
+
+
+
+
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+
+
+root.bind('<key>', key_press)
+
+
+
+
+
+
+root.mainloop()
