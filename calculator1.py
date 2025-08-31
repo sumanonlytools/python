@@ -1,0 +1,79 @@
+from tkinter import *
+import tkinter as tk
+root=Tk()
+root.geometry("300x300")
+root.title("calculator")
+
+def add(x,y):
+    return x + y
+    
+
+def subtract():
+    pass
+
+def multiply():
+    pass
+
+def divide():
+    pass
+
+
+
+
+
+
+
+text_var = tk.StringVar()
+def submit():
+ name=5
+ name=text_var.get()
+ text_var.set(key_press)
+ 
+ print(name)
+
+   
+l = ""
+def show_message():
+   pass
+
+
+
+Label(root,textvariable=text_var).grid(row=0,column=0,columnspan=4)
+Entry(root,textvariable=text_var).grid(row=1,column=0,columnspan=4)
+
+
+tk.Button(root,text="1",command=submit).grid(row=4, column=1)
+tk.Button(root,text="2").grid(row=4,column=2)
+tk.Button(root,text="3").grid(row=4,column=3)
+tk.Button(root,text="4").grid(row=5,column=1)
+tk.Button(root,text="5").grid(row=5,column=2)
+tk.Button(root,text="6").grid(row=5,column=3)      
+tk.Button(root,text="7").grid(row=6,column=1)
+tk.Button(root,text="8").grid(row=6,column=2)
+tk.Button(root,text="9").grid(row=6,column=3)
+tk.Button(root,text="0").grid(row=7,column=1)
+tk.Button(root,text="clear").grid(row=7,column=2)
+tk.Button(root,text="=").grid(row=7,column=3)
+tk.Button(root,text="+").grid(row=8,column=1)
+tk.Button(root,text="-").grid(row=8,column=2)
+tk.Button(root,text="x").grid(row=8,column=3)
+tk.Button(root,text="/").grid(row=9,column=1)
+
+
+
+def pos():
+    print("side")
+
+
+def key_press(event):
+    
+    key = event.char
+    print(key, 'is pressed')
+    if key=='+':
+        pos()
+
+root.bind('<KeyPress>',key_press)
+
+
+
+root.mainloop()
