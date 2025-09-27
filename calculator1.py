@@ -35,9 +35,12 @@ def submit():                     #function etak call korle ja ami ui er input e
  name=text_var.get()
  print(name)
  
+ list=[name]
+ list.append(name)
+ print(list)
 
- lo=text_var.set(name).append
- return name
+ text_var.set(list)
+ 
  
  
  
@@ -89,6 +92,18 @@ def key_press(event):     #keypress detect korbe ar print korbe, jhemon 1 is pre
     return key
 
 root.bind('<KeyPress>',key_press)         #ui wr sathe keypress ta ke bind korte hobe
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
