@@ -242,7 +242,7 @@ calc1=calc("suraj",123)
 
 print(calc1.name)
 print(calc1.number)
-"""
+
 class Dog:
     
 
@@ -262,3 +262,32 @@ print(dog1.name)
 dog3=Dog("chilly",8)
 
 print(dog3.age)
+
+
+import tkinter as tk
+
+def get_entry_value():
+    value = entry.get()
+    print("Entry value:", value)
+
+# Create the Tkinter window
+window = tk.Tk()
+window.title("Entry Widget Value Retrieval")
+
+# Create an Entry widget
+entry = tk.Entry(window)
+entry.pack()
+
+# Create a button to trigger value retrieval
+button = tk.Button(window, text="Get Entry Value", command=get_entry_value)
+button.pack()
+
+# Start the Tkinter event loop
+window.mainloop()
+
+1.gui window for calculator
+2.buttons
+3.show input output
+4.take input and calculate 
+5.show output in gui
+"""
